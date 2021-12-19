@@ -9,13 +9,13 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-@SequenceGenerator(name = "seq_usuario",sequenceName = "seq_usuario",allocationSize = 1,initialValue = 1)
+@SequenceGenerator(name = "seq_usuario",sequenceName = "seq_usuario",allocationSize = 1,initialValue = 1) //cria uma sequencia que inicia em 1 e que cresce de 1 em 1
 public class Usuario implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "seq_usuario")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "seq_usuario") //utiliza a sequencia "seq_usuario" para numerar os ids
 	private Long id;
 	
 	private String nome;
