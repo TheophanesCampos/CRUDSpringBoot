@@ -40,16 +40,16 @@ public class GreetingsController {
 //        return "Curso Spring Boot API: " + name + "!!";
 //	}
     
-    @RequestMapping(value = "/{nome}", method =  RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
-    public String retornaOlaMundo (@PathVariable String nome) {
-    	/*testar injeção de dependecia salvando usuário*/
-    	Usuario usuario = new Usuario();
-    	usuario.setNome(nome);
-    	usuarioRepository.save(usuario);/*gravar no banco de dados*/
-    	
-    	return "Olá mundo! Bem vindo " + nome +"!";
-    }
+//    @RequestMapping(value = "/{nome}", method =  RequestMethod.GET)
+//    @ResponseStatus(HttpStatus.OK)
+//    public String retornaOlaMundo (@PathVariable String nome) {
+//    	/*testar injeção de dependecia salvando usuário*/
+//    	Usuario usuario = new Usuario();
+//    	usuario.setNome(nome);
+//    	usuarioRepository.save(usuario);/*gravar no banco de dados*/
+//    	
+//    	return "Olá mundo! Bem vindo " + nome +"!";
+//    }
     
 //Primeiro método de API - buscarTodos   
     @GetMapping(value="listatodos")
